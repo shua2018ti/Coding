@@ -19,8 +19,8 @@ class VListNode():
     def __init__(self, capacity, prev_node, next_node):
         self.arr = []
         self.capacity = capacity
-        self.prev = prev_node
-        self.next = next_node
+        self.prev_node = prev_node
+        self.next_node = next_node
 
     def add(self, element):
         self.arr.append(element)
@@ -34,7 +34,7 @@ class VList():
         if len(self.tail.arr) < self.tail.capacity:
             self.tail.add(element)
         else:
-            new_tail = VListNode(capacity=self.tail.capacity * 2, prev_node=self.tail)
+            new_tail = VListNode(capacity=self.tail.capacity * 2, prev_node=self.tail, next_node=None)
             new_tail.add(element)
             self.tail.next_node = new_tail
             self.tail = new_tail
@@ -51,3 +51,13 @@ class VList():
                 current_node = current_node.prev_node
                 current_node_len = len(current_node.arr) - 1
         return current_node.arr[current_node_len]
+
+my_list = VList()
+my_list.add_to_list(0)
+print(my_list.tail.arr)
+my_list.add_to_list(1)
+print(my_list.tail.arr)
+my_list.add_to_list(2)
+print(my_list.tail.arr)
+print(my_list.tail.prev_node.arr)
+print(my_list.at_index(0))
