@@ -10,4 +10,14 @@ the number of elements in the array reach the capacity, a new link in the VList 
 
 In the example above, when the first link is filled with 1 element, another link in the VList is added with capacity 2. After
 the number of elements in this link reach capacity, another link is added with capacity 4.
+
+Implement the add_to_list(element) method that adds element to the tail of the VList
+Implement the at_index(index) method that returns the value store in the VList at index
 """
+
+class VListNode():
+    def __init__(self, capacity, prev_node, next_node):
+        self.arr = []
+        self.capacity = capacity
+        self.prev = prev_node
+        self.next = next_node
