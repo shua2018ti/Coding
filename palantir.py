@@ -38,3 +38,16 @@ class VList():
             new_tail.add(element)
             self.tail.next_node = new_tail
             self.tail = new_tail
+        self.cur += 1
+
+    def at_index(self, index):
+        current_node = self.tail
+        current_node_len = len(current_node.arr) - 1
+        tmp_cur = self.cur
+        while tmp_cur > index:
+            current_node_len -= 1
+            tmp_cur -= 1
+            if current_node_len == 0:
+                current_node = current_node.prev_node
+                current_node_len = len(current_node.arr) - 1
+        return current_node.arr[current_node_len]
