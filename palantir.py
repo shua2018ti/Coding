@@ -26,11 +26,9 @@ class VListNode():
         self.arr.append(element)
 
 class VList():
-    def __init__(self, tail=None):
-        if tail == None:
-            self.tail = VListNode(capacity=1, prev_node=None, next_node=None)
-        else:
-            self.tail = tail
+    def __init__(self):
+        self.tail = VListNode(capacity=1, prev_node=None, next_node=None)
+        self.cur = 0
 
     def add_to_list(self, element):
         if len(self.tail.arr) < self.tail.capacity:
