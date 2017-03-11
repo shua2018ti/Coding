@@ -49,7 +49,7 @@ class VList():
             if current_node_len == 0:
                 current_node = current_node.prev_node
                 current_node_len = len(current_node.arr) - 1
-            else:
+            if tmp_cur != index:
                 current_node_len -= 1
         return current_node.arr[current_node_len]
 
