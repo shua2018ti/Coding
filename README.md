@@ -1,4 +1,4 @@
-#Summary
+# Summary
 Throughout this academic year, I've gone through more technical interviews than I can count. The current structure of technical interviews (in my opinion) lends itself to a
 bias that works against students and other interview candidates who already belong to traditionally underrepresented groups in tech.
 
