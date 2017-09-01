@@ -32,7 +32,7 @@ def paginate(num, results):
                 added_hosts.add(item.split(",")[0])
         else:
             pending.append(item)
-    counter = 0
+    counter = 1
     while len(tmp_page) < num:
         tmp_page.append(pending.pop(0))
     tmp_page.append("")
