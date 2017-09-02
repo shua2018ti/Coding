@@ -5,8 +5,8 @@ def unique(string):
 	for character in string:
 		arr[ord(character)] += 1
 		if arr[ord(character)] > 1:
-			return false
-	return true
+			return False
+	return True
 ```
 
 # Find if two strings are permutations of each other
@@ -20,8 +20,8 @@ def perm(string1, string2):
 		arr2[ord(character)] += 1
 	for index, character in enumerate(arr1):
 		if arr2[index] != character:
-			return false
-	return true
+			return False
+	return False
 ```
 
 # Replace all "%20" in a string with spaces
