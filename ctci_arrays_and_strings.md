@@ -46,3 +46,17 @@ def compress(string):
 			count = 1
 	return new_string
 ```
+
+# Given an NxN matrix that represents an image, write a method to rotate the image by 90 degrees
+```python
+def rotate(image):
+	rotated = [[] * len(image[0])] * len(image)
+	column_idx = len(image[0]) - 1
+	for row in image:
+		row_idx = 0
+		for pixel in row:
+			rotated[row_idx][column_idx] = pixel
+			row_idx += 1
+		column_idx += 1
+	return rotated
+```
