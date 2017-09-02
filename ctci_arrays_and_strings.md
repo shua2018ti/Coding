@@ -60,3 +60,20 @@ def rotate(image):
 		column_idx += 1
 	return rotated
 ```
+
+# Write an algorithm that if an element in a matrix is 0, the whole column and row are set to 0
+```python
+def zero(matrix):
+	rows = set()
+	columns = set()
+	for row_idx, row_val in enumerate(matrix):
+		for col_idx, col_val in enumerate(row_val):
+			if col_val == 0:
+				rows.add(row_idx)
+				columns.add(col_idx)
+	for row in rows:
+		matrix[row] = [0] * len(matrix[0])
+	for col in columns:
+		for row in matrix:
+			row[col] = 0
+```
