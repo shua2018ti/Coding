@@ -77,3 +77,9 @@ def zero(matrix):
 		for row in matrix:
 			row[col] = 0
 ```
+
+# Given an isSubstring method that checks if one word is a substring of another, check if one string is a rotation of another using only one call to isSubstring
+```python
+def is_rotation(string1, string2):
+	
+```
