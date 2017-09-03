@@ -34,7 +34,12 @@ def delete_mid(node):
 # Partition a linked list around a value x such that all values less than x come before all values greater than or equal to x
 ```python
 def partition(linked_list, x):
-    node = linked_list.head
-    while node.next != None:
-        
+    current = linked_list.head
+    while current.next != None:
+        while current.next.val < x:
+            tmp = current.next
+            current.next = current.next.next
+            tmp.next = linked_list.head
+            linked_list.head = tmp
+        current = current.next
 ```
