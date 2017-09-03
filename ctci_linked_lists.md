@@ -21,3 +21,20 @@ def find_kth(node, k):
             print(node.data)
         return val
 ```
+
+# Given a reference to a middle node in a singly linked list, remove the node
+```python
+def delete_mid(node):
+    while node.next != None and node != None:
+        node.data = node.next.data
+        node = node.next
+    node = None
+```
+
+# Partition a linked list around a value x such that all values less than x come before all values greater than or equal to x
+```python
+def partition(linked_list, x):
+    node = linked_list.head
+    while node.next != None:
+        
+```
