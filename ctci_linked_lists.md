@@ -62,3 +62,8 @@ def unpack(linked_list):
         node = node.next
     return arr
 ```
+
+# Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop
+```python
+
+```
