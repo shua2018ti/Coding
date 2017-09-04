@@ -51,7 +51,8 @@ def add(linked_list_1, linked_list_2):
     arr2 = unpack(linked_list_2)
     num1 = int("".join(arr1))
     num2 = int("".join(arr2))
-    num3 = str(num1 + num2).split("")
+    arr3 = str(num1 + num2).split("")
+    return to_linked_list(reversed(arr3))
 
 def unpack(linked_list):
     arr = []
