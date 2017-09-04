@@ -43,3 +43,5 @@ def partition(linked_list, x):
             linked_list.head = tmp
         current = current.next
 ```
+
+# Given a linked list that stores digits of numbers in reverse order, write a function that adds the two numbers and returns the sum as a linked list
