@@ -65,5 +65,15 @@ def unpack(linked_list):
 
 # Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop
 ```python
-
+def find_fist(circular_list):
+    tu_jump = circular_list.head
+    wun_jump = circular_list.head
+    while tu_jump != None and wun_jump != None and tu_jump != wun_jump:
+        tu_jump = tu_jump.next.next
+        wun_jump = wun_jump.next.next
+    wun_jump = circular_list.head
+    while wun_jump != tu_jump:
+        wun_jump = wun_jump.next
+        tu_jump = tu_jump.next
+    return wun_jump.val
 ```
