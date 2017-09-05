@@ -77,3 +77,14 @@ def find_fist(circular_list):
         tu_jump = tu_jump.next
     return wun_jump.val
 ```
+
+# Check if a linked_list is a palindrome
+```python
+def is_palindrome(linked_list):
+    s1 = ""
+    node = linked_list.head
+    while node != None:
+        s1 += str(node.val)
+        node = node.next
+    return s1 == s1[::-1]
+```
