@@ -58,3 +58,8 @@ class TripleStax(object):
                 print("Stack 3 is empty.")
                 return False
 ```
+
+# Design a stack that that has push, pop, and min (returns the minimum element in the stack) operations that run in O(1) time
+```python
+
+```
