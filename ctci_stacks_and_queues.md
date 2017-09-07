@@ -61,5 +61,38 @@ class TripleStax(object):
 
 # Design a stack that that has push, pop, and min (returns the minimum element in the stack) operations that run in O(1) time
 ```python
+class StackNode(object):
+    """docstring for StackNode."""
+    def __init__(self, val):
+        super(StackNode, self).__init__()
+        self.val = val
+        self.previous = None
+        self.previous_min = 0
 
+class Stack(object):
+    """docstring for Stack."""
+    def __init__(self, top):
+        super(Stack, self).__init__()
+        self.top = top
+
+    def push(self, node):
+        if self.top == None:
+            self.top = node
+            node.previous_min = node.val
+        else:
+            node.previous = self.top
+            node.previous_min = min(self.top.previous_min, node.val)
+            self.top = node
+
+    def pop(self):
+        if self.top == None:
+            return None
+        top = self.top
+        self.top = self.top.previous
+        return top
+
+    def min(self):
+        if self.top == None:
+            return None
+        return self.top.previous_min
 ```
