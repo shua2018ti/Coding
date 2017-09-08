@@ -96,3 +96,20 @@ class Stack(object):
             return None
         return self.top.previous_min
 ```
+
+# Implement a `SetOfStacks` class that creates a new stack when the current stack grows too large
+```python
+class Node(object):
+    """docstring for Node."""
+    def __init__(self, val):
+        super(Node, self).__init__()
+        self.val = val
+
+
+class SetOfStacks(object):
+    """docstring for SetOfStacks."""
+    def __init__(self):
+        super(SetOfStacks, self).__init__()
+        self.stacks = []
+
+```
