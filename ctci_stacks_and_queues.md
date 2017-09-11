@@ -141,3 +141,5 @@ class SetOfStacks(object):
         if self.stacks[-1].length() > 0:
             return self.stacks[-1].pop()
 ```
+
+# Solve Towers of Hanoi using stacks
