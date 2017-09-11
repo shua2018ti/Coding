@@ -106,10 +106,38 @@ class Node(object):
         self.val = val
 
 
+class Stack(object):
+    """docstring for Stack."""
+    def __init__(self, capacity):
+        super(Stack, self).__init__()
+        self.array = []
+        self.capacity = capacity
+
+    def push(self, val):
+        self.array.append(val)
+
+    def pop(self):
+        return self.array.pop()
+
+    def length(self):
+        return len(self.array)
+
 class SetOfStacks(object):
     """docstring for SetOfStacks."""
     def __init__(self):
         super(SetOfStacks, self).__init__()
         self.stacks = []
+        self.stacks.append(Stack(10))
 
+    def push(self, val):
+        node = Node(val)
+        if self.stacks[-1].length() < self.stacks[-1].capacity:
+            self.stacks[-1].push(node)
+        else:
+            self.stacks.append(Stack(10))
+            self.stacks[-1].push(node)
+
+    def pop(self):
+        if self.stacks[-1].length() > 0:
+            return self.stacks[-1].pop()
 ```
