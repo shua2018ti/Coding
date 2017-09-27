@@ -109,4 +109,4 @@ def find_index(array):
 |  | Answer     |
 | :------------- | :------------- |
 | Time complexity       | O(n)       |
-| Space complexity       | O(1)       |
+| Space complexity       | O(n)       |
