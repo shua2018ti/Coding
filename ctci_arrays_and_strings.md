@@ -83,3 +83,11 @@ def zero(matrix):
 def is_rotation(string1, string2):
 	return string2.isSubstring(string1 + string1)
 ```
+
+# Given an array of integers, find the element where elements before are less than and elements after are greater than or equal to
+```python
+
+```
+|  | Answer     |
+| :------------- | :------------- |
+| Time complexity       | O(n)       |
