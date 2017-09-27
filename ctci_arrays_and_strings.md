@@ -91,3 +91,4 @@ def is_rotation(string1, string2):
 |  | Answer     |
 | :------------- | :------------- |
 | Time complexity       | O(n)       |
+| Space complexity       | O(1)       |
