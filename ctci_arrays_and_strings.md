@@ -86,7 +86,25 @@ def is_rotation(string1, string2):
 
 # Given an array of integers, find the element where elements before are less than and elements after are greater than or equal to
 ```python
+import sys
 
+def find_index(array):
+	left = [] * len(array)
+	left_max = -sys.maxsize
+	for idx, val in enumerate(array):
+		if val > left_max:
+			left_max = val
+		left[idx] = left_max
+	right = [] * len(array)
+	right_min = sys.maxsize
+	for idx in range(len(array) - 1, -1, -1):
+		if array[idx] < right_min:
+			right_min = array[idx]
+		right[idx] = right_min
+	for idx, val in enumerate(array):
+		if val == left[idx] and val == right[idx]:
+			return idx
+	return -1
 ```
 |  | Answer     |
 | :------------- | :------------- |
