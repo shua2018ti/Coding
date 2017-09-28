@@ -14,9 +14,3 @@ def solution(S, K):
     if running_word:
         final.insert(0, "".join(running_word))
     return "-".join(final)
-
-
-
-"""
-20:00 => 20:02
-"""
