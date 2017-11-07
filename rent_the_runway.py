@@ -7,3 +7,4 @@ def multiply_numbers(number_1, number_2):
     running_sum = []
     if len(number_1) < len(number_2):
         number_1, number_2 = number_2, number_1
+    
