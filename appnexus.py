@@ -10,6 +10,8 @@ key as values, flatten this data structure
 
 [D, F, C, B, A] <-- front of the line
 """
+import functools
+
 
 students = {
     'A':set(['B', 'C', 'D']),
@@ -38,6 +40,6 @@ def arrange_students(students):
         uniques.add(key)
         for item in value:
             uniques.add(item)
-    return sorted(list(uniques), cmp=make_comparator(compare_students))
+    return sorted(list(uniques), key=functools.cmp_to_key(make_comparator(compare_students)))
 
 print(arrange_students(students))
