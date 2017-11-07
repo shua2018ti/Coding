@@ -12,7 +12,6 @@ key as values, flatten this data structure
 """
 import functools
 
-
 students = {
     'A':set(['B', 'C', 'D']),
     'B':set(['C', 'D']),
