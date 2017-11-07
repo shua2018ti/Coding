@@ -1,6 +1,6 @@
 """
 Given an dictionary containing students as keys and an array of students that should come before the
-key, flatten this data structure
+key as values, flatten this data structure
 
 {
     'A':['B', 'C', 'D'],
@@ -8,7 +8,7 @@ key, flatten this data structure
     'C':['D', 'F'],
 }
 
-[D, F, C, B, A] <-- front of line
+[D, F, C, B, A] <-- front of the line
 """
 
 students = {
